@@ -123,7 +123,6 @@
                                         </state>
                                         <connections>
                                             <action selector="didDismiss:" destination="JHh-wm-yTi" eventType="touchUpInside" id="cB9-bg-1yW"/>
-                                            <action selector="didTapTutorial:" destination="JHh-wm-yTi" eventType="touchUpInside" id="v0F-Hb-2LE"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iYp-xY-uL3">
