@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MasterMixerView" customModule="MusicPanes" customModuleProvider="target">
+            <connections>
+                <outlet property="drumImageView" destination="Dud-aW-BFk" id="y5m-LB-YPy"/>
+                <outlet property="drumSlider" destination="8ZL-tK-tGm" id="KBD-Np-oOm"/>
+                <outlet property="keysImageView" destination="Bte-az-fSJ" id="aqf-pD-8m8"/>
+                <outlet property="keysSlider" destination="yNV-0a-1GQ" id="REd-F2-vH2"/>
+                <outlet property="micImageView" destination="vng-LV-Zj1" id="bkM-rf-fk7"/>
+                <outlet property="micSlider" destination="cnU-Vg-ErA" id="fNb-3Y-0pz"/>
+                <outlet property="mixerImageView" destination="nXQ-q2-WFM" id="rze-Dj-Zvo"/>
+                <outlet property="recordButton" destination="NqD-B7-OVH" id="tEI-uP-GkN"/>
+                <outlet property="tapTempoButton" destination="akk-P8-cVm" id="75g-4O-JiM"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="yla-vM-y1r">
+                    <rect key="frame" x="75" y="5" width="582" height="365"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CDQ-1X-Wz9">
+                            <rect key="frame" x="0.0" y="0.0" width="582" height="118.5"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="yNV-0a-1GQ" customClass="CustomSlider" customModule="MusicPanes" customModuleProvider="target">
+                                    <rect key="frame" x="88" y="0.0" width="434" height="118.5"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mixer" translatesAutoresizingMaskIntoConstraints="NO" id="nXQ-q2-WFM">
+                                    <rect key="frame" x="524" y="35" width="50" height="50"/>
+                                    <color key="tintColor" red="0.792156862745098" green="0.93333333333333335" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="nXQ-q2-WFM" secondAttribute="height" multiplier="1:1" priority="800" id="n5l-hZ-Ko2"/>
+                                    </constraints>
+                                </imageView>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="keyboard" translatesAutoresizingMaskIntoConstraints="NO" id="Bte-az-fSJ">
+                                    <rect key="frame" x="0.0" y="19.5" width="80" height="80"/>
+                                    <color key="tintColor" red="0.792156862745098" green="0.93333333333333335" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="Bte-az-fSJ" secondAttribute="height" multiplier="1:1" priority="800" id="0sp-aY-KgW"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="yNV-0a-1GQ" firstAttribute="leading" secondItem="Bte-az-fSJ" secondAttribute="trailing" constant="8" id="2kQ-iR-Gsd"/>
+                                <constraint firstItem="nXQ-q2-WFM" firstAttribute="leading" secondItem="yNV-0a-1GQ" secondAttribute="trailing" constant="2" id="417-Qo-ttM"/>
+                                <constraint firstItem="nXQ-q2-WFM" firstAttribute="centerY" secondItem="yNV-0a-1GQ" secondAttribute="centerY" id="8oc-79-0Od"/>
+                                <constraint firstItem="nXQ-q2-WFM" firstAttribute="top" relation="greaterThanOrEqual" secondItem="CDQ-1X-Wz9" secondAttribute="top" id="HmR-ua-mEF"/>
+                                <constraint firstItem="yNV-0a-1GQ" firstAttribute="centerY" secondItem="Bte-az-fSJ" secondAttribute="centerY" id="IN8-sS-hby"/>
+                                <constraint firstItem="Bte-az-fSJ" firstAttribute="leading" secondItem="CDQ-1X-Wz9" secondAttribute="leading" id="KVY-xz-btd"/>
+                                <constraint firstItem="yNV-0a-1GQ" firstAttribute="top" secondItem="CDQ-1X-Wz9" secondAttribute="top" id="Kei-3U-qF8"/>
+                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="nXQ-q2-WFM" secondAttribute="bottom" id="Urn-wP-IHM"/>
+                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Bte-az-fSJ" secondAttribute="bottom" id="VVX-hC-Tan"/>
+                                <constraint firstAttribute="bottom" secondItem="yNV-0a-1GQ" secondAttribute="bottom" id="bJs-86-nSw"/>
+                                <constraint firstItem="Bte-az-fSJ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="CDQ-1X-Wz9" secondAttribute="top" id="dpQ-1b-l83"/>
+                                <constraint firstAttribute="trailing" secondItem="nXQ-q2-WFM" secondAttribute="trailing" constant="8" id="uwG-Tb-yOn"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VKO-cQ-MUT">
+                            <rect key="frame" x="0.0" y="123.5" width="582" height="118.5"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="cnU-Vg-ErA" customClass="CustomSlider" customModule="MusicPanes" customModuleProvider="target">
+                                    <rect key="frame" x="88" y="0.0" width="494" height="118.5"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mic" translatesAutoresizingMaskIntoConstraints="NO" id="vng-LV-Zj1">
+                                    <rect key="frame" x="0.0" y="19.5" width="80" height="80"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="vng-LV-Zj1" secondAttribute="height" multiplier="1:1" priority="700" id="WUT-Q1-1JQ"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.792156862745098" green="0.93333333333333335" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="cnU-Vg-ErA" firstAttribute="leading" secondItem="vng-LV-Zj1" secondAttribute="trailing" constant="8" id="6E3-Oa-rcV"/>
+                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vng-LV-Zj1" secondAttribute="bottom" id="9mW-Sw-ity"/>
+                                <constraint firstAttribute="trailing" secondItem="cnU-Vg-ErA" secondAttribute="trailing" id="BH1-Af-bLg"/>
+                                <constraint firstItem="vng-LV-Zj1" firstAttribute="top" relation="greaterThanOrEqual" secondItem="VKO-cQ-MUT" secondAttribute="top" id="T5y-Pa-Idh"/>
+                                <constraint firstAttribute="bottom" secondItem="cnU-Vg-ErA" secondAttribute="bottom" id="VS0-JO-Hz3"/>
+                                <constraint firstItem="vng-LV-Zj1" firstAttribute="leading" secondItem="VKO-cQ-MUT" secondAttribute="leading" id="XUc-l8-WeV"/>
+                                <constraint firstItem="cnU-Vg-ErA" firstAttribute="centerY" secondItem="vng-LV-Zj1" secondAttribute="centerY" id="sXJ-ga-4bo"/>
+                                <constraint firstItem="cnU-Vg-ErA" firstAttribute="top" secondItem="VKO-cQ-MUT" secondAttribute="top" id="zi8-Xm-I5N"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aq7-ln-M4O">
+                            <rect key="frame" x="0.0" y="247" width="582" height="118"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="8ZL-tK-tGm" customClass="CustomSlider" customModule="MusicPanes" customModuleProvider="target">
+                                    <rect key="frame" x="87.5" y="0.0" width="494" height="118"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="drum" translatesAutoresizingMaskIntoConstraints="NO" id="Dud-aW-BFk">
+                                    <rect key="frame" x="0.0" y="12" width="79.5" height="94"/>
+                                    <color key="tintColor" red="0.792156862745098" green="0.93333333333333335" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="Dud-aW-BFk" secondAttribute="height" multiplier="1:1.18" priority="700" id="ftu-6u-PfQ"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="8ZL-tK-tGm" firstAttribute="centerY" secondItem="Dud-aW-BFk" secondAttribute="centerY" id="5Vm-yE-JpT"/>
+                                <constraint firstItem="Dud-aW-BFk" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Aq7-ln-M4O" secondAttribute="top" id="8EU-aP-6Tg"/>
+                                <constraint firstAttribute="bottom" secondItem="8ZL-tK-tGm" secondAttribute="bottom" id="DKL-th-C4z"/>
+                                <constraint firstItem="8ZL-tK-tGm" firstAttribute="leading" secondItem="Dud-aW-BFk" secondAttribute="trailing" constant="8" id="GRY-ly-7YN"/>
+                                <constraint firstItem="Dud-aW-BFk" firstAttribute="leading" secondItem="Aq7-ln-M4O" secondAttribute="leading" id="YrD-bL-86b"/>
+                                <constraint firstItem="8ZL-tK-tGm" firstAttribute="top" secondItem="Aq7-ln-M4O" secondAttribute="top" id="gdy-y5-iLd"/>
+                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Dud-aW-BFk" secondAttribute="bottom" id="hVX-48-Jdz"/>
+                                <constraint firstAttribute="trailing" secondItem="8ZL-tK-tGm" secondAttribute="trailing" id="l4c-gN-ZWG"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="cnU-Vg-ErA" firstAttribute="width" secondItem="yNV-0a-1GQ" secondAttribute="width" constant="60" id="7Ex-6e-0df"/>
+                        <constraint firstItem="VKO-cQ-MUT" firstAttribute="height" secondItem="CDQ-1X-Wz9" secondAttribute="height" id="BOh-jF-dbM"/>
+                        <constraint firstItem="8ZL-tK-tGm" firstAttribute="width" secondItem="yNV-0a-1GQ" secondAttribute="width" constant="60" id="E1C-YT-a0E"/>
+                        <constraint firstItem="cnU-Vg-ErA" firstAttribute="leading" secondItem="yNV-0a-1GQ" secondAttribute="leading" id="ZxX-X5-kb5"/>
+                        <constraint firstItem="Aq7-ln-M4O" firstAttribute="width" secondItem="CDQ-1X-Wz9" secondAttribute="width" id="bpO-Av-rnX"/>
+                        <constraint firstItem="VKO-cQ-MUT" firstAttribute="width" secondItem="CDQ-1X-Wz9" secondAttribute="width" id="gKR-Qj-B5p"/>
+                        <constraint firstItem="Aq7-ln-M4O" firstAttribute="height" secondItem="CDQ-1X-Wz9" secondAttribute="height" id="ojI-9s-rMI"/>
+                    </constraints>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NqD-B7-OVH" customClass="RecordToggleButton" customModule="MusicPanes" customModuleProvider="target">
+                    <rect key="frame" x="5" y="5" width="25" height="365"/>
+                    <color key="backgroundColor" red="1" green="0.38823529410000002" blue="0.43137254899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="25" id="kgX-WI-AGq"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="akk-P8-cVm" customClass="TapTempoButton" customModule="MusicPanes" customModuleProvider="target">
+                    <rect key="frame" x="35" y="5" width="25" height="365"/>
+                    <color key="backgroundColor" red="0.46862980770000001" green="0.82241798639999997" blue="0.43137254899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <gestureRecognizers/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="akk-P8-cVm" firstAttribute="bottom" secondItem="NqD-B7-OVH" secondAttribute="bottom" id="COH-K8-P2N"/>
+                <constraint firstItem="NqD-B7-OVH" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="5" id="K0D-26-aKN"/>
+                <constraint firstItem="yla-vM-y1r" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="5" id="Ndx-Xe-oEg"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="yla-vM-y1r" secondAttribute="trailing" constant="10" id="QrZ-6h-bLf"/>
+                <constraint firstItem="akk-P8-cVm" firstAttribute="top" secondItem="NqD-B7-OVH" secondAttribute="top" id="T4L-Gq-Byp"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="yla-vM-y1r" secondAttribute="bottom" constant="5" id="Tv7-j1-Cn7"/>
+                <constraint firstItem="akk-P8-cVm" firstAttribute="width" secondItem="NqD-B7-OVH" secondAttribute="width" id="V5B-j7-lSo"/>
+                <constraint firstItem="NqD-B7-OVH" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="bOD-fq-4sW"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="NqD-B7-OVH" secondAttribute="bottom" constant="5" id="nJW-0d-wut"/>
+                <constraint firstItem="yla-vM-y1r" firstAttribute="leading" secondItem="akk-P8-cVm" secondAttribute="trailing" constant="15" id="uaG-6z-axI"/>
+                <constraint firstItem="akk-P8-cVm" firstAttribute="leading" secondItem="NqD-B7-OVH" secondAttribute="trailing" constant="5" id="wkd-iz-aXc"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="120.5" y="54.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="drum" width="50" height="94"/>
+        <image name="keyboard" width="45" height="47"/>
+        <image name="mic" width="45" height="45"/>
+        <image name="mixer" width="100" height="100"/>
+    </resources>
+</document>

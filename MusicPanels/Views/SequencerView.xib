@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SequencerView" customModule="MusicPanes" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="hmC-JW-uiC" id="XIL-H2-NbE"/>
+                <outlet property="recordToggleButton" destination="LHW-qA-Cqi" id="ggK-hP-1OQ"/>
+                <outlet property="tapTempoButton" destination="f3X-Ut-MAf" id="3gN-LG-wEX"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="594" height="358"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="hmC-JW-uiC">
+                    <rect key="frame" x="65" y="5" width="524" height="348"/>
+                    <color key="backgroundColor" red="1" green="0.42745098039215684" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
+                    <gestureRecognizers/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="mMf-rG-M1T">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="nl9-kf-9YZ" appends="YES" id="3Xr-za-Rwx"/>
+                    </connections>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f3X-Ut-MAf" customClass="TapTempoButton" customModule="MusicPanes" customModuleProvider="target">
+                    <rect key="frame" x="35" y="5" width="25" height="348"/>
+                    <color key="backgroundColor" red="0.69069711538461542" green="1" blue="0.81487980769230772" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LHW-qA-Cqi" customClass="RecordToggleButton" customModule="MusicPanes" customModuleProvider="target">
+                    <rect key="frame" x="5" y="5" width="25" height="348"/>
+                    <color key="backgroundColor" red="1" green="0.49742788461538462" blue="0.44001201923076921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="25" id="VfX-es-A1L"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="LHW-qA-Cqi" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="2I0-cR-vQr"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="LHW-qA-Cqi" secondAttribute="bottom" constant="5" id="Eun-sJ-axk"/>
+                <constraint firstItem="LHW-qA-Cqi" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="5" id="HiL-nl-eHA"/>
+                <constraint firstItem="f3X-Ut-MAf" firstAttribute="leading" secondItem="LHW-qA-Cqi" secondAttribute="trailing" constant="5" id="L44-23-MJ5"/>
+                <constraint firstItem="f3X-Ut-MAf" firstAttribute="width" secondItem="LHW-qA-Cqi" secondAttribute="width" id="UQm-rF-0xC"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="hmC-JW-uiC" secondAttribute="trailing" constant="5" id="j3S-2w-sFV"/>
+                <constraint firstItem="hmC-JW-uiC" firstAttribute="leading" secondItem="f3X-Ut-MAf" secondAttribute="trailing" constant="5" id="lnD-eS-LMO"/>
+                <constraint firstItem="hmC-JW-uiC" firstAttribute="top" secondItem="LHW-qA-Cqi" secondAttribute="top" id="vwJ-vu-UXH"/>
+                <constraint firstItem="f3X-Ut-MAf" firstAttribute="bottom" secondItem="LHW-qA-Cqi" secondAttribute="bottom" id="xhx-kP-LMj"/>
+                <constraint firstItem="hmC-JW-uiC" firstAttribute="bottom" secondItem="LHW-qA-Cqi" secondAttribute="bottom" id="yFB-az-lN8"/>
+                <constraint firstItem="f3X-Ut-MAf" firstAttribute="top" secondItem="LHW-qA-Cqi" secondAttribute="top" id="yMr-Kf-LfG"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="172" y="209"/>
+        </view>
+        <pinchGestureRecognizer id="nl9-kf-9YZ">
+            <connections>
+                <action selector="didPinchOnCollectionView:" destination="-1" id="D3P-hp-2q8"/>
+            </connections>
+        </pinchGestureRecognizer>
+    </objects>
+</document>
