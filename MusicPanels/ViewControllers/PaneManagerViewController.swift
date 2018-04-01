@@ -71,6 +71,11 @@ class PaneManagerViewController: UIViewController {
         // offset in CommonInit()
         topCarouselView.currentIndex = topCarouselView.startIndex
         bottomCarouselView.currentIndex = bottomCarouselView.startIndex
+        
+        // Check for intro experience
+        if !TutorialManager.hasSeenTutorial() {
+            presentHelpNavigationViewController()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -78,11 +83,17 @@ class PaneManagerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func presentHelpNavigationViewController() {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "HelpNavigationViewController") as! HelpNavigationViewController
+        vc.modalPresentationStyle = .overCurrentContext
+        vc.modalTransitionStyle = .crossDissolve
+        present(vc, animated: true, completion: nil)
+    }
+    
     @objc func didDoubleTap(sender: UITapGestureRecognizer) {
         if sender.state == .ended {
             // Present help/navigation screen
-            let vc = storyboard?.instantiateViewController(withIdentifier: "HelpNavigationViewController") as! HelpNavigationViewController
-            present(vc, animated: true, completion: nil)
+            presentHelpNavigationViewController()
         }
     }
     

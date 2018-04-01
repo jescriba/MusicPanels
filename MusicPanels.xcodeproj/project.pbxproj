@@ -10,6 +10,8 @@
 		16EAF842E8D4FA019B216455 /* Pods_MusicPanelsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5291C21CF4626A07D49D0FC /* Pods_MusicPanelsTests.framework */; };
 		4205AC832058F1DE0045EE3A /* SequenceEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4205AC822058F1DE0045EE3A /* SequenceEvent.swift */; };
 		4205AC85205B74C70045EE3A /* PartialIndexPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4205AC84205B74C70045EE3A /* PartialIndexPath.swift */; };
+		420833C820716016008050B4 /* TutorialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420833C720716016008050B4 /* TutorialManager.swift */; };
+		420833CA20716270008050B4 /* TutorialVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 420833C920716270008050B4 /* TutorialVideo.mp4 */; };
 		421E7CAD205F013400D5210A /* Drums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421E7CAC205F013400D5210A /* Drums.swift */; };
 		421E7CB0205F747700D5210A /* closedHH.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 421E7CAF205F747700D5210A /* closedHH.mp3 */; };
 		421E7CB2205F748000D5210A /* openHH.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 421E7CB1205F748000D5210A /* openHH.mp3 */; };
@@ -37,6 +39,7 @@
 		42CB2D07202C2261001042E0 /* MasterMixerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CB2D06202C2261001042E0 /* MasterMixerView.swift */; };
 		42CB2D09202D7B60001042E0 /* DrumPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CB2D08202D7B60001042E0 /* DrumPadView.swift */; };
 		42F96EB32070535C002A1BC5 /* HelpNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F96EB22070535C002A1BC5 /* HelpNavigationController.swift */; };
+		42F96EB520706276002A1BC5 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F96EB420706276002A1BC5 /* TutorialViewController.swift */; };
 		4D11913D1FE9A78B00F11CF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D11913C1FE9A78B00F11CF7 /* AppDelegate.swift */; };
 		4D11913F1FE9A78B00F11CF7 /* PaneManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D11913E1FE9A78B00F11CF7 /* PaneManagerViewController.swift */; };
 		4D1191421FE9A78B00F11CF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D1191401FE9A78B00F11CF7 /* Main.storyboard */; };
@@ -80,6 +83,8 @@
 		327B0448B2435FE67BEDC313 /* Pods_MusicPanels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicPanels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4205AC822058F1DE0045EE3A /* SequenceEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceEvent.swift; sourceTree = "<group>"; };
 		4205AC84205B74C70045EE3A /* PartialIndexPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartialIndexPath.swift; sourceTree = "<group>"; };
+		420833C720716016008050B4 /* TutorialManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialManager.swift; sourceTree = "<group>"; };
+		420833C920716270008050B4 /* TutorialVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = TutorialVideo.mp4; sourceTree = "<group>"; };
 		421E7CAC205F013400D5210A /* Drums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drums.swift; sourceTree = "<group>"; };
 		421E7CAF205F747700D5210A /* closedHH.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = closedHH.mp3; path = ../../../../Desktop/closedHH.mp3; sourceTree = "<group>"; };
 		421E7CB1205F748000D5210A /* openHH.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = openHH.mp3; path = ../../../../Desktop/openHH.mp3; sourceTree = "<group>"; };
@@ -107,6 +112,7 @@
 		42CB2D06202C2261001042E0 /* MasterMixerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterMixerView.swift; sourceTree = "<group>"; };
 		42CB2D08202D7B60001042E0 /* DrumPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrumPadView.swift; sourceTree = "<group>"; };
 		42F96EB22070535C002A1BC5 /* HelpNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpNavigationController.swift; sourceTree = "<group>"; };
+		42F96EB420706276002A1BC5 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		4D1191391FE9A78B00F11CF7 /* MusicPanels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPanels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D11913C1FE9A78B00F11CF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D11913E1FE9A78B00F11CF7 /* PaneManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaneManagerViewController.swift; sourceTree = "<group>"; };
@@ -170,6 +176,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		420833C620716006008050B4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				420833C720716016008050B4 /* TutorialManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		421E7CAE205F71BB00D5210A /* Samples */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,8 +198,17 @@
 			children = (
 				4D11913E1FE9A78B00F11CF7 /* PaneManagerViewController.swift */,
 				42F96EB22070535C002A1BC5 /* HelpNavigationController.swift */,
+				42F96EB420706276002A1BC5 /* TutorialViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		42F96EB92070690C002A1BC5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				420833C920716270008050B4 /* TutorialVideo.mp4 */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		4D1191301FE9A78B00F11CF7 = {
@@ -213,6 +236,8 @@
 		4D11913B1FE9A78B00F11CF7 /* MusicPanels */ = {
 			isa = PBXGroup;
 			children = (
+				42F96EB92070690C002A1BC5 /* Resources */,
+				420833C620716006008050B4 /* Helpers */,
 				421E7CAE205F71BB00D5210A /* Samples */,
 				4D152DFE1FEC7E9000056773 /* Models */,
 				4DFF5B6E1FE9A90100D367E1 /* Views */,
@@ -452,6 +477,7 @@
 				42CB2CFD2026C84A001042E0 /* CarouselView.xib in Resources */,
 				4D1191441FE9A78B00F11CF7 /* Assets.xcassets in Resources */,
 				4245352E1FEB92B800A12206 /* SequencerView.xib in Resources */,
+				420833CA20716270008050B4 /* TutorialVideo.mp4 in Resources */,
 				42CB2CF920255EBB001042E0 /* MicrophoneView.xib in Resources */,
 				425BF54A20216705001860D4 /* ADSRView.xib in Resources */,
 				421E7CB0205F747700D5210A /* closedHH.mp3 in Resources */,
@@ -650,8 +676,10 @@
 				4DA2A67F2024F80C0006BA92 /* CarouselView.swift in Sources */,
 				4205AC832058F1DE0045EE3A /* SequenceEvent.swift in Sources */,
 				42CB2D01202ADE5F001042E0 /* CustomSlider.swift in Sources */,
+				420833C820716016008050B4 /* TutorialManager.swift in Sources */,
 				42CB2D09202D7B60001042E0 /* DrumPadView.swift in Sources */,
 				42AD1E942043D08E00B377C5 /* Song.swift in Sources */,
+				42F96EB520706276002A1BC5 /* TutorialViewController.swift in Sources */,
 				42CB2CF520255E81001042E0 /* MicrophoneView.swift in Sources */,
 				4245352C1FEB90EE00A12206 /* SequencerView.swift in Sources */,
 				42CB2CFF202ADD9F001042E0 /* RecordToggleButton.swift in Sources */,
