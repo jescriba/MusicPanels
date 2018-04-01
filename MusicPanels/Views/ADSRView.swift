@@ -12,6 +12,7 @@ import AudioKitUI
 
 class ADSRView: UIView {
     @IBOutlet weak var akadsrView: AKADSRView!
+    @IBOutlet weak var keyboardImageView: UIImageView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -38,6 +39,8 @@ class ADSRView: UIView {
         view.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
         view.topAnchor.constraint(equalTo: topAnchor).isActive = true
         view.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        
+        keyboardImageView.tintColor = .pastelBlue
         
         akadsrView.bgColor = .black
         akadsrView.attackColor = .pastelRed
