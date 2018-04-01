@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Pane Manager View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="PaneManagerViewController" customModule="MusicPanels" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wr7-az-7I3">
+                                <rect key="frame" x="0.0" y="160" width="667" height="215"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cEo-JW-cuJ" customClass="CarouselView" customModule="MusicPanels" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="667" height="215"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="viewStrings" value="CatalogView,KeyboardView,DrumPadView"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="startIndex">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="cEo-JW-cuJ" secondAttribute="bottom" id="70T-AT-Zcd"/>
+                                    <constraint firstItem="cEo-JW-cuJ" firstAttribute="leading" secondItem="Wr7-az-7I3" secondAttribute="leading" id="GLO-fC-oU0"/>
+                                    <constraint firstAttribute="trailing" secondItem="cEo-JW-cuJ" secondAttribute="trailing" id="nLd-Vd-IJD"/>
+                                    <constraint firstItem="cEo-JW-cuJ" firstAttribute="top" secondItem="Wr7-az-7I3" secondAttribute="top" id="x4V-PW-6CS"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8fJ-w9-w5C">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="120"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9z1-o1-I6j" customClass="CarouselView" customModule="MusicPanels" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="667" height="120"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="viewStrings" value="MasterMixerView,MicrophoneView,SequencerView,ADSRView,KeyboardFXView"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="startIndex">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="9z1-o1-I6j" secondAttribute="bottom" id="CPw-Uf-Jok"/>
+                                    <constraint firstItem="9z1-o1-I6j" firstAttribute="leading" secondItem="8fJ-w9-w5C" secondAttribute="leading" id="FGS-Ae-L4I"/>
+                                    <constraint firstAttribute="trailing" secondItem="9z1-o1-I6j" secondAttribute="trailing" id="PMM-L1-vKo"/>
+                                    <constraint firstItem="9z1-o1-I6j" firstAttribute="top" secondItem="8fJ-w9-w5C" secondAttribute="top" id="zMh-tR-Yaw"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d9c-2J-Bsi">
+                                <rect key="frame" x="0.0" y="120" width="667" height="40"/>
+                                <color key="backgroundColor" red="0.59999999999999998" green="0.29019607843137252" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="KiD-aj-tOs"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="d9c-2J-Bsi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2iX-Qx-4bq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8fJ-w9-w5C" secondAttribute="trailing" id="3rB-bw-NFR"/>
+                            <constraint firstItem="d9c-2J-Bsi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="120" id="APZ-dH-0cL"/>
+                            <constraint firstItem="Wr7-az-7I3" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="F5N-26-zP1"/>
+                            <constraint firstItem="8fJ-w9-w5C" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ixz-pS-uoP"/>
+                            <constraint firstItem="Wr7-az-7I3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Nir-C8-PLx"/>
+                            <constraint firstItem="Wr7-az-7I3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TaD-w2-oV1"/>
+                            <constraint firstItem="8fJ-w9-w5C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eb3-Yl-HUx"/>
+                            <constraint firstItem="d9c-2J-Bsi" firstAttribute="top" secondItem="8fJ-w9-w5C" secondAttribute="bottom" id="fo3-Nv-M9c"/>
+                            <constraint firstItem="Wr7-az-7I3" firstAttribute="top" secondItem="d9c-2J-Bsi" secondAttribute="bottom" id="rGa-t2-PeR"/>
+                            <constraint firstItem="d9c-2J-Bsi" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uA1-QQ-ae3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="borderView" destination="d9c-2J-Bsi" id="IQG-E9-mSk"/>
+                        <outlet property="bottomCarouselView" destination="cEo-JW-cuJ" id="c5i-TP-OiF"/>
+                        <outlet property="bottomView" destination="Wr7-az-7I3" id="6K4-Nr-7CP"/>
+                        <outlet property="topBorderConstraint" destination="APZ-dH-0cL" id="LaX-bt-ZbW"/>
+                        <outlet property="topCarouselView" destination="9z1-o1-I6j" id="byI-UF-02I"/>
+                        <outlet property="topView" destination="8fJ-w9-w5C" id="B3p-gX-pbG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.880059970015" y="133.59999999999999"/>
+        </scene>
+        <!--Help Navigation View Controller-->
+        <scene sceneID="Igh-Hf-s6V">
+            <objects>
+                <viewController storyboardIdentifier="HelpNavigationViewController" id="JHh-wm-yTi" customClass="HelpNavigationViewController" customModule="MusicPanels" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="74b-qk-voo">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xKj-ew-VjS">
+                                <rect key="frame" x="284.5" y="164" width="98" height="47"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iYp-xY-uL3">
+                                        <rect key="frame" x="0.0" y="0.0" width="98" height="47"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                        <state key="normal" title="Tutorial">
+                                            <color key="titleColor" red="0.4155168269230769" green="0.62124999999999997" blue="0.89049278846153845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapTutorial:" destination="JHh-wm-yTi" eventType="touchUpInside" id="zxO-TT-eGW"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xKj-ew-VjS" firstAttribute="centerX" secondItem="l4j-ki-pgv" secondAttribute="centerX" id="8O7-Yg-6Tu"/>
+                            <constraint firstItem="xKj-ew-VjS" firstAttribute="centerY" secondItem="l4j-ki-pgv" secondAttribute="centerY" id="veG-UG-OjB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="l4j-ki-pgv"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wDc-eR-ATX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130" y="889"/>
+        </scene>
+    </scenes>
+</document>

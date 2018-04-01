@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KeyboardView" customModule="MusicPanes" customModuleProvider="target">
+            <connections>
+                <outlet property="akKeyboardView" destination="ZcN-mc-2To" id="HNG-xj-JQi"/>
+                <outlet property="scrollView" destination="zSR-lv-myy" id="2LO-2W-H5X"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zSR-lv-myy">
+                    <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZcN-mc-2To" customClass="AKKeyboardView" customModule="AudioKitUI">
+                            <rect key="frame" x="-667" y="0.0" width="2001" height="375"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="ZcN-mc-2To" firstAttribute="centerX" secondItem="zSR-lv-myy" secondAttribute="centerX" id="KfX-kn-uu6"/>
+                        <constraint firstItem="ZcN-mc-2To" firstAttribute="centerY" secondItem="zSR-lv-myy" secondAttribute="centerY" id="a33-bq-dx3"/>
+                        <constraint firstItem="ZcN-mc-2To" firstAttribute="top" secondItem="zSR-lv-myy" secondAttribute="top" id="cn2-Gx-ToH"/>
+                        <constraint firstItem="ZcN-mc-2To" firstAttribute="top" secondItem="zSR-lv-myy" secondAttribute="top" id="dew-WH-Gxj"/>
+                        <constraint firstAttribute="bottom" secondItem="ZcN-mc-2To" secondAttribute="bottom" id="gFt-rv-qS7"/>
+                        <constraint firstAttribute="trailing" secondItem="ZcN-mc-2To" secondAttribute="trailing" id="hie-LH-w9T"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ZcN-mc-2To" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="3" id="3DA-Fh-7LH"/>
+                <constraint firstItem="zSR-lv-myy" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="PmD-4L-Gx2"/>
+                <constraint firstItem="zSR-lv-myy" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="dKa-6j-dwc"/>
+                <constraint firstItem="zSR-lv-myy" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="nEq-gY-zWt"/>
+                <constraint firstItem="zSR-lv-myy" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="sAt-pU-bon"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="34.5" y="53.5"/>
+        </view>
+    </objects>
+</document>
