@@ -13,8 +13,6 @@
 		420833C820716016008050B4 /* TutorialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420833C720716016008050B4 /* TutorialManager.swift */; };
 		420833CA20716270008050B4 /* TutorialVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 420833C920716270008050B4 /* TutorialVideo.mp4 */; };
 		421E7CAD205F013400D5210A /* Drums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421E7CAC205F013400D5210A /* Drums.swift */; };
-		421E7CB0205F747700D5210A /* closedHH.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 421E7CAF205F747700D5210A /* closedHH.mp3 */; };
-		421E7CB2205F748000D5210A /* openHH.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 421E7CB1205F748000D5210A /* openHH.mp3 */; };
 		421E7CB6205F997500D5210A /* Microphone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421E7CB5205F997500D5210A /* Microphone.swift */; };
 		4245352C1FEB90EE00A12206 /* SequencerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4245352B1FEB90EE00A12206 /* SequencerView.swift */; };
 		4245352E1FEB92B800A12206 /* SequencerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4245352D1FEB92B800A12206 /* SequencerView.xib */; };
@@ -38,6 +36,8 @@
 		42CB2D05202C2204001042E0 /* KeyboardFXView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CB2D04202C2204001042E0 /* KeyboardFXView.swift */; };
 		42CB2D07202C2261001042E0 /* MasterMixerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CB2D06202C2261001042E0 /* MasterMixerView.swift */; };
 		42CB2D09202D7B60001042E0 /* DrumPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CB2D08202D7B60001042E0 /* DrumPadView.swift */; };
+		42E69843207A704400EA6450 /* closedHH.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 42E69842207A704400EA6450 /* closedHH.mp3 */; };
+		42E69845207A705000EA6450 /* openHH.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 42E69844207A705000EA6450 /* openHH.mp3 */; };
 		42F96EB32070535C002A1BC5 /* HelpNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F96EB22070535C002A1BC5 /* HelpNavigationController.swift */; };
 		42F96EB520706276002A1BC5 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F96EB420706276002A1BC5 /* TutorialViewController.swift */; };
 		4D11913D1FE9A78B00F11CF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D11913C1FE9A78B00F11CF7 /* AppDelegate.swift */; };
@@ -86,8 +86,6 @@
 		420833C720716016008050B4 /* TutorialManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialManager.swift; sourceTree = "<group>"; };
 		420833C920716270008050B4 /* TutorialVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = TutorialVideo.mp4; sourceTree = "<group>"; };
 		421E7CAC205F013400D5210A /* Drums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drums.swift; sourceTree = "<group>"; };
-		421E7CAF205F747700D5210A /* closedHH.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = closedHH.mp3; path = ../../../../Desktop/closedHH.mp3; sourceTree = "<group>"; };
-		421E7CB1205F748000D5210A /* openHH.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = openHH.mp3; path = ../../../../Desktop/openHH.mp3; sourceTree = "<group>"; };
 		421E7CB5205F997500D5210A /* Microphone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Microphone.swift; sourceTree = "<group>"; };
 		4245352B1FEB90EE00A12206 /* SequencerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequencerView.swift; sourceTree = "<group>"; };
 		4245352D1FEB92B800A12206 /* SequencerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SequencerView.xib; sourceTree = "<group>"; };
@@ -111,6 +109,8 @@
 		42CB2D04202C2204001042E0 /* KeyboardFXView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardFXView.swift; sourceTree = "<group>"; };
 		42CB2D06202C2261001042E0 /* MasterMixerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterMixerView.swift; sourceTree = "<group>"; };
 		42CB2D08202D7B60001042E0 /* DrumPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrumPadView.swift; sourceTree = "<group>"; };
+		42E69842207A704400EA6450 /* closedHH.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = closedHH.mp3; sourceTree = "<group>"; };
+		42E69844207A705000EA6450 /* openHH.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = openHH.mp3; sourceTree = "<group>"; };
 		42F96EB22070535C002A1BC5 /* HelpNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpNavigationController.swift; sourceTree = "<group>"; };
 		42F96EB420706276002A1BC5 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		4D1191391FE9A78B00F11CF7 /* MusicPanels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPanels.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -187,8 +187,8 @@
 		421E7CAE205F71BB00D5210A /* Samples */ = {
 			isa = PBXGroup;
 			children = (
-				421E7CAF205F747700D5210A /* closedHH.mp3 */,
-				421E7CB1205F748000D5210A /* openHH.mp3 */,
+				42E69842207A704400EA6450 /* closedHH.mp3 */,
+				42E69844207A705000EA6450 /* openHH.mp3 */,
 			);
 			path = Samples;
 			sourceTree = "<group>";
@@ -468,19 +468,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				421E7CB2205F748000D5210A /* openHH.mp3 in Resources */,
 				4D1191471FE9A78B00F11CF7 /* LaunchScreen.storyboard in Resources */,
 				42AD1E8E202F52D100B377C5 /* MasterMixerView.xib in Resources */,
 				42AD1E8C202F52BE00B377C5 /* KeyboardFXView.xib in Resources */,
+				42E69843207A704400EA6450 /* closedHH.mp3 in Resources */,
 				4DFF5B721FE9A93200D367E1 /* KeyboardView.xib in Resources */,
 				42AD1E90202F52DF00B377C5 /* DrumPadView.xib in Resources */,
 				42CB2CFD2026C84A001042E0 /* CarouselView.xib in Resources */,
 				4D1191441FE9A78B00F11CF7 /* Assets.xcassets in Resources */,
 				4245352E1FEB92B800A12206 /* SequencerView.xib in Resources */,
+				42E69845207A705000EA6450 /* openHH.mp3 in Resources */,
 				420833CA20716270008050B4 /* TutorialVideo.mp4 in Resources */,
 				42CB2CF920255EBB001042E0 /* MicrophoneView.xib in Resources */,
 				425BF54A20216705001860D4 /* ADSRView.xib in Resources */,
-				421E7CB0205F747700D5210A /* closedHH.mp3 in Resources */,
 				42CB2CFB20255ED8001042E0 /* CatalogView.xib in Resources */,
 				4D1191421FE9A78B00F11CF7 /* Main.storyboard in Resources */,
 			);
