@@ -62,7 +62,8 @@ class AudioEngine: NSObject {
             guard let p = player else { return 0 }
             guard p.endTime > 0 else { return 0 }
             let ratio = p.currentTime / p.endTime
-            if ratio > 1 { return 1 }
+            if isRecording && ratio > 1 { return 1 }
+            if ratio > 1 { return ratio.truncatingRemainder(dividingBy: floor(ratio)) }
             return ratio
         }
     }
