@@ -9,12 +9,17 @@
 import Foundation
 import AudioKit
 
+protocol AudioEngineDelegate {
+    func didUpdateIsPlaying(_ isPlaying: Bool)
+}
+
 class AudioEngine: NSObject {
     static let shared = AudioEngine()
     let keyboard = Keyboard()
     let microphone = Microphone()
     let drums = Drums()
     let sequencer = Sequencer()
+    var delegate: AudioEngineDelegate?
     var recorder: AKNodeRecorder?
     var player: AKAudioPlayer?
     var tape: AKAudioFile?
@@ -39,6 +44,7 @@ class AudioEngine: NSObject {
                 if shouldRecord {
                     isRecording = false
                 }
+                delegate?.didUpdateIsPlaying(isPlaying)
                 return
             }
             
@@ -47,6 +53,17 @@ class AudioEngine: NSObject {
             if shouldRecord {
                 isRecording = true
             }
+            delegate?.didUpdateIsPlaying(isPlaying)
+
+        }
+    }
+    var trackTimeRatio: Double {
+        get {
+            guard let p = player else { return 0 }
+            guard p.endTime > 0 else { return 0 }
+            let ratio = p.currentTime / p.endTime
+            if ratio > 1 { return 1 }
+            return ratio
         }
     }
     private let mixer = AKMixer()
