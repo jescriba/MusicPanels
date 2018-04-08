@@ -235,7 +235,7 @@ extension PaneManagerViewController: CatalogManagerDelegate {
         
         let messageVC = MFMessageComposeViewController()
         messageVC.messageComposeDelegate = self
-        messageVC.body = "Check out my song made with MusicPanes";
+        messageVC.body = "Check out my song made with MusicPanels";
         messageVC.addAttachmentData(songData, typeIdentifier: "audio/aiff", filename: "\(fileName).aif")
         messageVC.recipients = [""]
         messageVC.messageComposeDelegate = self;
