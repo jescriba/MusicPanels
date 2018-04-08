@@ -98,6 +98,8 @@ class CatalogManager: NSObject {
     static func loadSong(_ song: Song) {
         // Load file from storage
         guard let fileName = song.fileName, let filePath = baseURL?.appendingPathComponent("\(fileName).aif") else { return }
+        // Prevent crashes due to the file not having been written to
+        guard FileManager.default.fileExists(atPath: filePath.path) else { return }
         guard let tape = try? AKAudioFile(forReading: filePath) else { return }
         
         // Update audio file
