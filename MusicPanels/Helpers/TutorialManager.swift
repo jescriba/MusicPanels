@@ -10,10 +10,10 @@ import Foundation
 
 class TutorialManager {
     static func hasSeenTutorial() -> Bool {
-        return UserDefaults.standard.bool(forKey: "IntroExperience") ?? false
+        return UserDefaults.standard.bool(forKey: "IntroExperience-1.1")
     }
     
     static func setHasSeenTutorial() {
-        UserDefaults.standard.set(true, forKey: "IntroExperience")
+        UserDefaults.standard.set(true, forKey: "IntroExperience-1.1")
     }
 }
