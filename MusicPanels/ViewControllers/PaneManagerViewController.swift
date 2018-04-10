@@ -35,6 +35,11 @@ class PaneManagerViewController: UIViewController {
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var bottomCarouselView: CarouselView!
     @IBOutlet weak var topCarouselView: CarouselView!
+    @IBOutlet weak var playheadView: UIView!
+    @IBOutlet weak var playtrackView: UIView!
+    @IBOutlet weak var playheadConstraint: NSLayoutConstraint!
+    
+    var playheadPositionTimer: Timer?
     var paneConfiguration = PaneConfiguration(top: .sequencer, bottom: .keyboard)
     var maxBottomOffset: CGFloat = 80.0
     var maxTopOffset: CGFloat = 60.0
@@ -51,6 +56,10 @@ class PaneManagerViewController: UIViewController {
         borderView.addGestureRecognizer(doubleTapRecognizer)
         
         borderView.backgroundColor = UIColor.paneBorder
+        playheadView.layer.cornerRadius = 10
+        // Setup playhead UI based on AudioEngine state
+        AudioEngine.shared.delegate = self
+        updatePlayheadAndTrack()
         
         // Couldn't add screen edge recognizer in storyboard???
         // wtf.. needed to add separate recognizers for both edges
@@ -81,6 +90,45 @@ class PaneManagerViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // Incrementally update the playhead position
+    @objc func updatePlayheadPosition() {
+        playheadConstraint.constant = playtrackView.bounds.width * CGFloat(AudioEngine.shared.trackTimeRatio) - playheadView.bounds.width / 2
+    }
+    
+    // Update playhead and track ui configuration once audio state changes
+    func updatePlayheadAndTrack() {
+        playheadConstraint.constant = playtrackView.bounds.width * CGFloat(AudioEngine.shared.trackTimeRatio)
+        if AudioEngine.shared.isPlaying {
+            UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.05, options: [], animations: {
+                self.playtrackView.alpha = 0.2
+            }, completion: nil)
+            // Start tracking playhead position
+            playheadPositionTimer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(updatePlayheadPosition), userInfo: nil, repeats: true)
+        } else {
+            UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.1, options: [], animations: {
+                self.playtrackView.alpha = 0
+            }, completion: nil)
+            playheadView.layer.removeAllAnimations()
+            // Stop tracking playhead position
+            playheadPositionTimer?.invalidate()
+        }
+        
+        if AudioEngine.shared.isRecording {
+            // Playing and recording
+            UIView.animate(withDuration: 1, delay: 0, options: [.repeat, .autoreverse, .curveEaseOut], animations: {
+                self.playheadView.alpha = 0
+            }, completion: { (_) in
+                self.playheadView.alpha = 1
+            })
+        }
+        
+        if AudioEngine.shared.isPlaying &&
+            !AudioEngine.shared.shouldRecord {
+            // Ensure playhead is no longer animated
+            playheadView.layer.removeAllAnimations()
+        }
     }
     
     func presentHelpNavigationViewController() {
@@ -187,7 +235,7 @@ extension PaneManagerViewController: CatalogManagerDelegate {
         
         let messageVC = MFMessageComposeViewController()
         messageVC.messageComposeDelegate = self
-        messageVC.body = "Check out my song made with MusicPanes";
+        messageVC.body = "Check out my song made with MusicPanels";
         messageVC.addAttachmentData(songData, typeIdentifier: "audio/aiff", filename: "\(fileName).aif")
         messageVC.recipients = [""]
         messageVC.messageComposeDelegate = self;
@@ -206,5 +254,11 @@ extension PaneManagerViewController: MFMessageComposeViewControllerDelegate {
         case .sent:
             dismiss(animated: true, completion: nil)
         }
+    }
+}
+
+extension PaneManagerViewController: AudioEngineDelegate {
+    func didUpdateIsPlaying(_ isPlaying: Bool) {
+        updatePlayheadAndTrack()
     }
 }

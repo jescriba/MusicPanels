@@ -11,6 +11,7 @@ import AVFoundation
 import UIKit
 
 class TutorialViewController: UIViewController {
+    @IBOutlet weak var seekSlider: UISlider!
     let safeAreaView = UIView()
     var player: AVPlayer?
     
@@ -25,6 +26,7 @@ class TutorialViewController: UIViewController {
             safeAreaView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor)
             ])
         safeAreaView.frame = view.bounds
+        
         startTutorialVideo()
     }
     
@@ -36,10 +38,49 @@ class TutorialViewController: UIViewController {
         layer.frame = safeAreaView.bounds
         layer.videoGravity =  .resizeAspect
         safeAreaView.layer.addSublayer(layer)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(didFinishTutorial), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object:         player?.currentItem)
 
+        seekSlider.backgroundColor = .clear        
+        player?.addObserver(self, forKeyPath: "status", options: .new, context: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(didFinishTutorial), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: player?.currentItem)
         player?.play()
+        Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(updateSliderPosition), userInfo: nil, repeats: true)
+    }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "status" {
+            seekSlider.minimumValue = 0
+            seekSlider.maximumValue = Float(player?.currentItem?.duration.seconds ?? 0)
+            seekSlider.value = Float(player?.currentItem?.currentTime().seconds ?? 0)
+            view.bringSubview(toFront: seekSlider)
+            
+            seekSlider.alpha = 1
+            UIView.animate(withDuration: 5, animations: {
+                self.seekSlider.alpha = 0.2
+            })
+        }
+    }
+    
+    @IBAction func seekValueChanged(_ sender: Any) {
+        seekSlider.alpha = 1
+
+        let slider = sender as! UISlider
+        let time = CMTime(seconds: Double(slider.value), preferredTimescale: 1)
+        player?.seek(to: time, completionHandler: { _ in
+            UIView.animate(withDuration: 2, animations: {
+                self.seekSlider.alpha = 0.2
+            })
+        })
+    }
+    
+    @IBAction func didTapSlider(_ sender: Any) {
+        self.seekSlider.alpha = 1
+        UIView.animate(withDuration: 2, animations: {
+            self.seekSlider.alpha = 0.2
+        })
+    }
+    
+    @objc func updateSliderPosition() {
+        seekSlider.value = Float(player?.currentItem?.currentTime().seconds ?? 0)
     }
     
     @objc func didFinishTutorial() {
