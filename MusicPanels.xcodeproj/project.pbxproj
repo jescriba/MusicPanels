@@ -11,13 +11,13 @@
 		4205AC832058F1DE0045EE3A /* SequenceEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4205AC822058F1DE0045EE3A /* SequenceEvent.swift */; };
 		4205AC85205B74C70045EE3A /* PartialIndexPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4205AC84205B74C70045EE3A /* PartialIndexPath.swift */; };
 		420833C820716016008050B4 /* TutorialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420833C720716016008050B4 /* TutorialManager.swift */; };
-		420833CA20716270008050B4 /* TutorialVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 420833C920716270008050B4 /* TutorialVideo.mp4 */; };
 		421E7CAD205F013400D5210A /* Drums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421E7CAC205F013400D5210A /* Drums.swift */; };
 		421E7CB6205F997500D5210A /* Microphone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421E7CB5205F997500D5210A /* Microphone.swift */; };
 		4245352C1FEB90EE00A12206 /* SequencerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4245352B1FEB90EE00A12206 /* SequencerView.swift */; };
 		4245352E1FEB92B800A12206 /* SequencerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4245352D1FEB92B800A12206 /* SequencerView.xib */; };
 		425BF548202166F0001860D4 /* ADSRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425BF547202166F0001860D4 /* ADSRView.swift */; };
 		425BF54A20216705001860D4 /* ADSRView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 425BF54920216705001860D4 /* ADSRView.xib */; };
+		425D8694207D00B000D7573C /* TutorialVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 425D8693207D00AF00D7573C /* TutorialVideo.mp4 */; };
 		427EF2501FECB78D001FD8AC /* AudioEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427EF24F1FECB78D001FD8AC /* AudioEngine.swift */; };
 		427EF2521FED7A37001FD8AC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427EF2511FED7A37001FD8AC /* Extensions.swift */; };
 		42AD1E8C202F52BE00B377C5 /* KeyboardFXView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42AD1E8B202F52BE00B377C5 /* KeyboardFXView.xib */; };
@@ -84,13 +84,13 @@
 		4205AC822058F1DE0045EE3A /* SequenceEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceEvent.swift; sourceTree = "<group>"; };
 		4205AC84205B74C70045EE3A /* PartialIndexPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartialIndexPath.swift; sourceTree = "<group>"; };
 		420833C720716016008050B4 /* TutorialManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialManager.swift; sourceTree = "<group>"; };
-		420833C920716270008050B4 /* TutorialVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = TutorialVideo.mp4; sourceTree = "<group>"; };
 		421E7CAC205F013400D5210A /* Drums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drums.swift; sourceTree = "<group>"; };
 		421E7CB5205F997500D5210A /* Microphone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Microphone.swift; sourceTree = "<group>"; };
 		4245352B1FEB90EE00A12206 /* SequencerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequencerView.swift; sourceTree = "<group>"; };
 		4245352D1FEB92B800A12206 /* SequencerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SequencerView.xib; sourceTree = "<group>"; };
 		425BF547202166F0001860D4 /* ADSRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSRView.swift; sourceTree = "<group>"; };
 		425BF54920216705001860D4 /* ADSRView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ADSRView.xib; sourceTree = "<group>"; };
+		425D8693207D00AF00D7573C /* TutorialVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = TutorialVideo.mp4; sourceTree = "<group>"; };
 		427EF24F1FECB78D001FD8AC /* AudioEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioEngine.swift; sourceTree = "<group>"; };
 		427EF2511FED7A37001FD8AC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		42AD1E8B202F52BE00B377C5 /* KeyboardFXView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyboardFXView.xib; sourceTree = "<group>"; };
@@ -206,7 +206,7 @@
 		42F96EB92070690C002A1BC5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				420833C920716270008050B4 /* TutorialVideo.mp4 */,
+				425D8693207D00AF00D7573C /* TutorialVideo.mp4 */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -477,8 +477,8 @@
 				42CB2CFD2026C84A001042E0 /* CarouselView.xib in Resources */,
 				4D1191441FE9A78B00F11CF7 /* Assets.xcassets in Resources */,
 				4245352E1FEB92B800A12206 /* SequencerView.xib in Resources */,
+				425D8694207D00B000D7573C /* TutorialVideo.mp4 in Resources */,
 				42E69845207A705000EA6450 /* openHH.mp3 in Resources */,
-				420833CA20716270008050B4 /* TutorialVideo.mp4 in Resources */,
 				42CB2CF920255EBB001042E0 /* MicrophoneView.xib in Resources */,
 				425BF54A20216705001860D4 /* ADSRView.xib in Resources */,
 				42CB2CFB20255ED8001042E0 /* CatalogView.xib in Resources */,
