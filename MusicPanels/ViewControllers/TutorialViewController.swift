@@ -40,7 +40,7 @@ class TutorialViewController: UIViewController {
         safeAreaView.layer.addSublayer(layer)
 
         seekSlider.backgroundColor = .clear        
-        player?.addObserver(self, forKeyPath: "status", options: .new, context: nil)
+        player?.currentItem?.addObserver(self, forKeyPath: "status", options: .new, context: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(didFinishTutorial), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: player?.currentItem)
         player?.play()
         Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(updateSliderPosition), userInfo: nil, repeats: true)
@@ -48,8 +48,8 @@ class TutorialViewController: UIViewController {
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == "status" {
-            seekSlider.minimumValue = 0
             seekSlider.maximumValue = Float(player?.currentItem?.duration.seconds ?? 0)
+            seekSlider.minimumValue = 0
             seekSlider.value = Float(player?.currentItem?.currentTime().seconds ?? 0)
             view.bringSubview(toFront: seekSlider)
             

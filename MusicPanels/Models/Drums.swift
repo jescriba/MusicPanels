@@ -41,9 +41,9 @@ class Drums: NSObject {
             case .snare:
                 snare.play(noteNumber: 0, velocity: 90)
             case .closedHH:
-                closedHH.play(noteNumber: 60, velocity: 90, channel: 3)
+                try? closedHH.play(noteNumber: 60, velocity: 90, channel: 3)
             case .openHH:
-                openHH.play(noteNumber: 60, velocity: 90, channel: 4)
+                try? openHH.play(noteNumber: 60, velocity: 90, channel: 4)
         }
     }
 }

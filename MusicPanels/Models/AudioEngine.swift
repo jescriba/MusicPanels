@@ -99,7 +99,7 @@ class AudioEngine: NSObject {
         // Initial Values
         microphone.volume = 0.0
         keyboard.delayFX = 0
-        AudioKit.start()
+        try? AudioKit.start()
         
         // Enabled after starting audio kit
         drums.setupSamplers()

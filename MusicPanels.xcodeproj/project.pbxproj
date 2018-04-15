@@ -357,8 +357,6 @@
 				4D1191351FE9A78B00F11CF7 /* Sources */,
 				4D1191361FE9A78B00F11CF7 /* Frameworks */,
 				4D1191371FE9A78B00F11CF7 /* Resources */,
-				4831BF97889E2D787732525F /* [CP] Embed Pods Frameworks */,
-				26069DE6C91AD90A1832AC37 /* [CP] Copy Pods Resources */,
 				423775A220704CE3003A6490 /* ShellScript */,
 			);
 			buildRules = (
@@ -378,8 +376,6 @@
 				4D1191491FE9A78B00F11CF7 /* Sources */,
 				4D11914A1FE9A78B00F11CF7 /* Frameworks */,
 				4D11914B1FE9A78B00F11CF7 /* Resources */,
-				6C1264B5DED00A312FDCB780 /* [CP] Embed Pods Frameworks */,
-				065B9009AD324C67F8A496CC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -399,8 +395,6 @@
 				4D1191541FE9A78B00F11CF7 /* Sources */,
 				4D1191551FE9A78B00F11CF7 /* Frameworks */,
 				4D1191561FE9A78B00F11CF7 /* Resources */,
-				7AB79D738646BFCB56051782 /* [CP] Embed Pods Frameworks */,
-				1E2C16CA3BAE6BB1B189E50A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -521,36 +515,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		065B9009AD324C67F8A496CC /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MusicPanelsTests/Pods-MusicPanelsTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1E2C16CA3BAE6BB1B189E50A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MusicPanelsUITests/Pods-MusicPanelsUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		22D2282B88D999960364D315 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -569,21 +533,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		26069DE6C91AD90A1832AC37 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MusicPanels/Pods-MusicPanels-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		423775A220704CE3003A6490 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 8;
@@ -596,56 +545,6 @@
 			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "$BUILT_PRODUCTS_DIR/$FRAMEWORKS_FOLDER_PATH/AudioKit.framework/fix-framework.sh";
-		};
-		4831BF97889E2D787732525F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MusicPanels/Pods-MusicPanels-frameworks.sh",
-				"${PODS_ROOT}/AudioKit/iOS/AudioKit.framework",
-				"${PODS_ROOT}/AudioKit/iOS/AudioKitUI.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AudioKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AudioKitUI.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MusicPanels/Pods-MusicPanels-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6C1264B5DED00A312FDCB780 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MusicPanelsTests/Pods-MusicPanelsTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7AB79D738646BFCB56051782 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MusicPanelsUITests/Pods-MusicPanelsUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 		8D02E499525387017DC44F38 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -869,6 +768,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GFSP92A3FB;
 				INFOPLIST_FILE = "$(SRCROOT)/MusicPanels/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.joshuae.MusicPanels;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -887,6 +787,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GFSP92A3FB;
 				INFOPLIST_FILE = "$(SRCROOT)/MusicPanels/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.joshuae.MusicPanels;
 				PRODUCT_NAME = "$(TARGET_NAME)";
