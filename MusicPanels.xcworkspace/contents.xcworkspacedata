@@ -2,12 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/joshua/code/MusicPanels/MusicPanels.xcodeproj">
+      location = "group:MusicPanels.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:MusicPanels.xcodeproj">
    </FileRef>
 </Workspace>
